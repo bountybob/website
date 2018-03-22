@@ -1,2 +1,7 @@
-build/
-dest/
+/.gradle/
+/.nb-gradle/
+/build/
+/dest/
+/dist/
+/gradle/
+/node_modules
