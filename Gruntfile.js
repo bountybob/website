@@ -12,7 +12,9 @@ module.exports = function(grunt) {
         copy: {
             css: {
                 files: [
-                    {src: 'node_modules/bootstrap/dist/css/bootstrap.min.css', dest: 'build/css/', expand: true, flatten: true}
+                    {src: [
+                        'node_modules/bootstrap/dist/css/bootstrap.min.css',                        
+                    ], dest: 'build/css/', expand: true, flatten: true}
                 ]
             },
             js: {
