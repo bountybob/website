@@ -30,7 +30,12 @@ module.exports = function(grunt) {
                 files: [
                     {src: 'src/*.html', dest: 'build/', expand: true, flatten: true}
                 ]
-            }            
+            },
+            img: {                
+                files: [
+                    {src: '**', dest: 'build/img/', expand: true, cwd: 'src/img'}
+                ]
+            }
         }, // copy
                     
         concat: {
@@ -62,7 +67,11 @@ module.exports = function(grunt) {
             html: {
                 files: ['src/*.html'],
                 tasks: ['copy:html']
-            }        
+            },
+            img: {
+                files: ['src/img/*'],
+                tasks: ['copy:img']
+            }
         } // watch
     }); // initConfig
 
